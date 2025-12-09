@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>USDT.z Official Page</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f7f7f7; }
-    h1 { color: #2c3e50; }
-    p { font-size: 1.1em; color: #34495e; }
-    a { color: #1abc9c; text-decoration: none; margin: 0 10px; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);}
-    img { width: 120px; margin-bottom: 20px; }
-    .buttons { margin-top: 20px; }
-    .buttons a { display: inline-block; margin: 5px 10px; padding: 10px 20px; background-color: #1abc9c; color: #fff; border-radius: 8px; text-decoration: none; }
-    .buttons a:hover { background-color: #16a085; }
-  </style>
+    <meta charset="UTF-8">
+    <title>USDT.z</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #2ecc71; color: #fff; }
+        h1 { font-size: 3em; margin-bottom: 10px; }
+        p { font-size: 1.2em; margin-bottom: 30px; }
+        .buttons { margin: 20px; }
+        .buttons a, .buttons button { margin: 5px; padding: 12px 25px; border-radius: 8px; text-decoration: none; cursor: pointer; font-weight: bold; }
+        .download { background-color: #2980b9; color: #fff; border: none; }
+        .copy { background-color: #f39c12; color: #fff; border: none; }
+        .social { background-color: #34495e; color: #fff; border: none; }
+        .footer { margin-top: 40px; font-size: 0.9em; color: #ecf0f1; }
+        img.logo { width: 150px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <img src="../blockchains/smartchain/assets/0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9/logo.png" alt="USDT.z Logo">
-    
-    <!-- Title & Description -->
-    <h1>USDT.z Official Page</h1>
-    <p>USDT.z is a stablecoin on BNB Smart Chain designed for fast payments, liquidity, and secure transactions.</p>
-    
-    <!-- Whitepaper -->
-    <div class="buttons">
-      <a href="../whitepaper/USDTz_Whitepaper.pdf" target="_blank">Download Whitepaper</a>
-    </div>
-<!-- Add Wallet -->
-<div class="buttons">
-  <button onclick="copyContract()" style="padding:10px 20px; border-radius:8px; background-color:#f39c12; color:#fff; border:none; cursor:pointer;">
-    Copy Contract Address
-  </button>
-  <span id="copyMessage" style="margin-left:10px; color:green;"></span>
-</div>
 
-<script>
-function copyContract() {
-  const contractAddress = "0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9";
-  navigator.clipboard.writeText(contractAddress).then(() => {
-    document.getElementById("copyMessage").innerText = "Copied!";
-  }).catch(() => {
-    document.getElementById("copyMessage").innerText = "Failed to copy";
-  });
-}
-</script>
-    <!-- Social Links -->
+    <img src="../blockchains/smartchain/assets/0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9/logo.png" alt="USDT.z Logo" class="logo">
+    <h1>USDT.z</h1>
+    <p>Stablecoin on Binance Smart Chain (BSC)</p>
+
     <div class="buttons">
-      <a href="https://t.me/usdtz_bnb" target="_blank">Telegram</a>
-      <a href="https://x.com/usdtz_bnb" target="_blank">Twitter</a>
+        <a class="download" href="../whitepaper/USDTz_Whitepaper.pdf" target="_blank">Download Whitepaper</a>
+        <button class="copy" onclick="copyContract()">Copy Contract Address</button>
+        <span id="copyMessage" style="margin-left:10px; color: #fff;"></span>
     </div>
 
-    <!-- Explorer Link -->
     <div class="buttons">
-      <a href="https://bscscan.com/token/0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9" target="_blank">View on BscScan</a>
+        <a href="https://bscscan.com/token/0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9" target="_blank" class="download">View on BscScan</a>
     </div>
-  </div>
+
+    <div class="buttons">
+        <a href="https://t.me/usdtz_bnb" target="_blank" class="social">Telegram</a>
+        <a href="https://x.com/usdtz_bnb" target="_blank" class="social">X / Twitter</a>
+    </div>
+
+    <div class="footer">
+        USDT.z | Contract: 0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9 | All rights reserved
+    </div>
+
+    <script>
+        function copyContract() {
+            const contractAddress = "0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9";
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                document.getElementById("copyMessage").innerText = "Copied!";
+            }).catch(() => {
+                document.getElementById("copyMessage").innerText = "Failed to copy";
+            });
+        }
+    </script>
+
 </body>
 </html>
