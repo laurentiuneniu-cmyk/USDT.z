@@ -30,7 +30,24 @@
     <div class="buttons">
       <a href="../whitepaper/USDTz_Whitepaper.pdf" target="_blank">Download Whitepaper</a>
     </div>
+<!-- Add Wallet -->
+<div class="buttons">
+  <button onclick="copyContract()" style="padding:10px 20px; border-radius:8px; background-color:#f39c12; color:#fff; border:none; cursor:pointer;">
+    Copy Contract Address
+  </button>
+  <span id="copyMessage" style="margin-left:10px; color:green;"></span>
+</div>
 
+<script>
+function copyContract() {
+  const contractAddress = "0x523754604bB5889Eb26da8f35C4Cdd30C3cAe8a9";
+  navigator.clipboard.writeText(contractAddress).then(() => {
+    document.getElementById("copyMessage").innerText = "Copied!";
+  }).catch(() => {
+    document.getElementById("copyMessage").innerText = "Failed to copy";
+  });
+}
+</script>
     <!-- Social Links -->
     <div class="buttons">
       <a href="https://t.me/usdtz_bnb" target="_blank">Telegram</a>
